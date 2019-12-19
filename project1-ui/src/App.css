@@ -1,7 +1,42 @@
-.App {
+ .App {
   text-align: center;
 }
+#userlogin{
+  width: 30%;
+  margin: 0 auto;
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +70,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
