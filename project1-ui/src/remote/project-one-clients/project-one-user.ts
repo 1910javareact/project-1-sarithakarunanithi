@@ -30,7 +30,7 @@ export async function userLogin(username: string, password: string) {
 //hits get on /gardens to recieve all gardens
 export const getAllUsers = async () => {
     try {
-        let response = await uUserClient.get('/gardens')
+        let response = await uUserClient.get('/users')
         if (response.status === 200) {
             return {
                 status: response.status,

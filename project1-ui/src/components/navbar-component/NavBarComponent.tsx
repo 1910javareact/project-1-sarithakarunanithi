@@ -6,7 +6,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -28,28 +27,14 @@ const ReimbursementNavBar = (props: any) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              {/* login */}
               <Link to='/login'>Login</Link>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
+            </NavItem> 
+               
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Pages
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
+            <NavItem>
+            <Link to='/users/display'>Users</Link>
+            </NavItem> 
+              
             </UncontrolledDropdown>
           </Nav>
           <NavbarText>Simple Text</NavbarText>
