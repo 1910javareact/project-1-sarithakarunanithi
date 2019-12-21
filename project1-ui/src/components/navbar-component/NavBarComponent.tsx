@@ -34,6 +34,12 @@ const ReimbursementNavBar = (props: any) => {
             <NavItem>
             <Link to='/users/display'>Users</Link>
             </NavItem> 
+            <NavItem>
+            <Link to='/reimbursements/status/'>Reimbursement</Link>
+            </NavItem> 
+            <NavItem>
+            <Link to='/users/id/'>UserById</Link>
+            </NavItem> 
               
             </UncontrolledDropdown>
           </Nav>
