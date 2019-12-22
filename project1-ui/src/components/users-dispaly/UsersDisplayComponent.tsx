@@ -2,7 +2,7 @@ import React from 'react'
 import { Table } from 'reactstrap'
 import { RouteComponentProps, Redirect } from 'react-router'
 import { User } from '../../models/users'
-import { getAllUsers } from '../../remote/project-one-clients/project-one-user'
+import { getAllUsers } from '../../remote/user'
 import { UsersDisplayRowComponent } from './users-display-row/UsersDisplayRowComponent'
 
 interface IUsersDisplayProps extends RouteComponentProps{
@@ -51,7 +51,6 @@ export class UsersDisplayComponent extends React.Component<any, IUsersDisplaySta
                         <thead>
                             <tr>
                                 <td>ID</td>
-                                {/* <td>Username</td> */}
                                 <td>Firstname</td>
                                 <td>Lastname</td>
                                 <td>Email</td>

@@ -1,4 +1,4 @@
-import { userLogin } from "../remote/project-one-clients/project-one-user"
+import { userLogin } from "../remote/user"
 
 // we will make an object with constant values
 // so we dont have to worry about spelling
@@ -40,6 +40,5 @@ export const uLogin = (username:string, password:string) => async (dispatch:any)
         dispatch({
             type:uLoginTypes.UNSUCCESSFUL_LOGIN
         })
-    }
-    
+    }   
 }

@@ -23,9 +23,10 @@ const App: React.FC = () => {
           </nav>
           <Switch>
             <Route path='/login' component={LoginComponent} />
+            <Route path = '/users/display/id' component={UseridComponent} />
             <Route path ='/users/' component ={UsersDisplayComponent} />
            <Route path = '/reimbursements/status/' component={ReimbursementByStatusComponent} />
-           <Route path = '/users/id' cpomponent={UseridComponent} />
+           
             {/* <Home /> */}
 
           </Switch>
