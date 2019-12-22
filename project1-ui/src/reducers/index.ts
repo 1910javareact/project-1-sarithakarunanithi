@@ -38,5 +38,5 @@ export interface IReimbursement{
 }
 
 export interface IUser{
-    user:User[]
+    user:User
 }

@@ -38,14 +38,16 @@ export class ReimbursementByStatusComponent extends React.Component<IReimburseme
        })
 
        return(
-        <div>
+        <div className="idinput">
             <Form onSubmit={this.submitId}>
                     <FormGroup>
-                        <Label for="exampleID">ID</Label>
-                        <Input value={this.state.id} onChange={this.updateId} type="number" name="ID" id="exampleID" placeholder="with a placeholder" />
+                        <Label for="exampleID">Reimbursement ID</Label>
+                        <Input value={this.state.id} onChange={this.updateId} type="number" name="ID" id="exampleID" placeholder="Id" />
                     </FormGroup>
-                    <Button color='danger'>Submit</Button>
+                    <Button color='info'>Submit</Button>
                 </Form>
+                <br />
+                <h4>Reimbursement Information</h4>
         <Table bordered color='danger'>
             <thead>
                 <tr>
@@ -54,7 +56,7 @@ export class ReimbursementByStatusComponent extends React.Component<IReimburseme
                     <td>Amount</td>
                     <td>Description</td>
                     <td>Resolver</td>
-                    <td>Status</td>
+                    {/* <td>Status</td> */}
                 </tr>
             </thead>
             <tbody>

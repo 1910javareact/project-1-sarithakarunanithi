@@ -25,7 +25,7 @@ const App: React.FC = () => {
             <Route path='/login' component={LoginComponent} />
             <Route path = '/users/display/id' component={UseridComponent} />
             <Route path ='/users/' component ={UsersDisplayComponent} />
-           <Route path = '/reimbursements/status/' component={ReimbursementByStatusComponent} />
+            <Route path = '/reimbursements/status/' component={ReimbursementByStatusComponent} />
            
             {/* <Home /> */}
 

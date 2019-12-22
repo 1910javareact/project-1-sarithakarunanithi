@@ -34,11 +34,15 @@ export class LoginComponent extends React.Component<ILoginComponentProps, any>{
     submitLogin = async (e: SyntheticEvent) => {
         e.preventDefault()
         this.props.uLogin(this.state.username, this.state.password)
+        this.setState({             // clear input value after submit the form
+            username: '',
+            password: ''
+        })
     }
 
     render() {
         return (
-            <div>
+            <div className="idinput">
                 <Form onSubmit={this.submitLogin}>
                     <FormGroup>
                         <Label for="exampleUsername">Username</Label>
@@ -48,7 +52,7 @@ export class LoginComponent extends React.Component<ILoginComponentProps, any>{
                         <Label for="examplePassword">Password</Label>
                         <Input value={this.state.password} onChange={this.updatePassword} type="password" name="password" id="examplePassword" placeholder="Password" />
                     </FormGroup>
-                    <Button color='info'>Login</Button>
+                    <Button onClick={this.submitLogin} color='info'>Login</Button>
                 </Form>
                 <p>{this.props.user.name}</p>
             </div>

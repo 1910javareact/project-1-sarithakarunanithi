@@ -2,21 +2,20 @@ import React, { SyntheticEvent } from "react"
 import { RouteComponentProps } from "react-router"
 import { User } from "../../models/users"
 import { Form, FormGroup, Label, Input, Button, Table } from "reactstrap"
-import { UseridDisplayRowComponent } from "./userid-display-row/UseridDisplayRowComponent"
 
-interface IUseridProps extends RouteComponentProps{
-    user: User[]
-    userID: (id:number) => void
-    
+interface IUseridProps {
+    user: User
+    userID: (id: number) => void
+
 }
 
 
-export class UseridComponent extends React.Component<IUseridProps,any>{
+export class UseridComponent extends React.Component<IUseridProps, any>{
 
-    constructor(props: any){
+    constructor(props: any) {
         super(props)
         this.state = {
-            id:undefined
+            id: 0
         }
     }
 
@@ -32,19 +31,19 @@ export class UseridComponent extends React.Component<IUseridProps,any>{
         this.props.userID(this.state.id)
     }
 
-    render(){
-        let rows = this.props.user.map((e) => {
-            return <UseridDisplayRowComponent user = {e} key = {'user' + e.userId} />
-        })
-        return(
-            <div>
+    render() {
+
+        return (
+            <div className="idinput">
                 <Form onSubmit={this.submitId}>
                     <FormGroup>
-                        <Label for="exampleID">ID</Label>
-                        <Input value={this.state.id} onChange={this.updateId} type="number" name="ID" id="exampleID" placeholder="User ID" />
+                        <Label for="exampleID">User ID</Label>
+                        <Input value={this.state.id} onChange={this.updateId} type="number" name="ID" id="exampleID" placeholder="Have your User ID" />
                     </FormGroup>
-                    <Button color='danger'>Submit</Button>
+                    <Button color='info'>Submit</Button>
                 </Form>
+                <br />
+                <h4>User Information</h4>
 
                 <Table bordered color='danger'>
                     <thead>
@@ -53,11 +52,18 @@ export class UseridComponent extends React.Component<IUseridProps,any>{
                             <td>Firstname</td>
                             <td>Lastname</td>
                             <td>Email</td>
-                            <td>Role</td>
+                           
                         </tr>
                     </thead>
                     <tbody>
-                        {rows}
+                       
+                        <tr>
+                            <td>{this.props.user.userId}</td>
+                            <td>{this.props.user.firstName}</td>
+                            <td>{this.props.user.lastName}</td>
+                            <td>{this.props.user.email}</td>
+                           
+                        </tr>
                     </tbody>
                 </Table>
             </div>
