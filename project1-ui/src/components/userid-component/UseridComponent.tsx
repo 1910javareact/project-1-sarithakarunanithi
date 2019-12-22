@@ -15,7 +15,7 @@ export class UseridComponent extends React.Component<IUseridProps, any>{
     constructor(props: any) {
         super(props)
         this.state = {
-            id: 0
+            id: undefined
         }
     }
 
@@ -42,6 +42,7 @@ export class UseridComponent extends React.Component<IUseridProps, any>{
                     </FormGroup>
                     <Button color='info'>Submit</Button>
                 </Form>
+
                 <br />
                 <h4>User Information</h4>
 
@@ -52,17 +53,14 @@ export class UseridComponent extends React.Component<IUseridProps, any>{
                             <td>Firstname</td>
                             <td>Lastname</td>
                             <td>Email</td>
-                           
                         </tr>
                     </thead>
                     <tbody>
-                       
                         <tr>
                             <td>{this.props.user.userId}</td>
                             <td>{this.props.user.firstName}</td>
                             <td>{this.props.user.lastName}</td>
                             <td>{this.props.user.email}</td>
-                           
                         </tr>
                     </tbody>
                 </Table>

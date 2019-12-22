@@ -13,7 +13,6 @@ export const ReimbursementDisplayRowComponent: React.FC<IReimbursementDisplayRow
             <td>{props.reimbursement.amount}</td>
             <td>{props.reimbursement.description}</td>
             <td>{props.reimbursement.resolver}</td>
-            {/* <td>{props.reimbursement.status}</td> */}
         </tr>
     )
 }

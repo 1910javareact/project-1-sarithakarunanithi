@@ -4,42 +4,42 @@ import { Reimbursement } from '../../models/reimbursement'
 import { ReimbursementDisplayRowComponent } from './reimbursementstatus-display-row/ReimbursementDisplayRowComponent'
 import { Table, Form, FormGroup, Label, Input, Button } from 'reactstrap'
 
-interface IReimbursementDisplayProps extends RouteComponentProps{
-    reimbursement:Reimbursement[]
-    reimbursementID:(id:number) => void
+interface IReimbursementDisplayProps extends RouteComponentProps {
+    reimbursement: Reimbursement[]
+    reimbursementID: (id: number) => void
 }
 
 
 export class ReimbursementByStatusComponent extends React.Component<IReimbursementDisplayProps, any>{
 
-    constructor(props:any){
+    constructor(props: any) {
         super(props)
         this.state = {
-           id:undefined
+            id: undefined
         }
     }
 
 
-    updateId = (e:any) => {
+    updateId = (e: any) => {
         this.setState({
             ...this.state,
             id: e.target.value
         })
     }
 
-    submitId = async(e:SyntheticEvent) => {
+    submitId = async (e: SyntheticEvent) => {
         e.preventDefault()
         this.props.reimbursementID(this.state.id)
     }
 
-   render(){
-       let rows = this.props.reimbursement.map((e) => {
-           return <ReimbursementDisplayRowComponent reimbursement={e} key={'reimbursement' + e.reimbursementId } />
-       })
+    render() {
+        let rows = this.props.reimbursement.map((e) => {
+            return <ReimbursementDisplayRowComponent reimbursement={e} key={'reimbursement' + e.reimbursementId} />
+        })
 
-       return(
-        <div className="idinput">
-            <Form onSubmit={this.submitId}>
+        return (
+            <div className="idinput">
+                <Form onSubmit={this.submitId}>
                     <FormGroup>
                         <Label for="exampleID">Reimbursement ID</Label>
                         <Input value={this.state.id} onChange={this.updateId} type="number" name="ID" id="exampleID" placeholder="Id" />
@@ -48,22 +48,21 @@ export class ReimbursementByStatusComponent extends React.Component<IReimburseme
                 </Form>
                 <br />
                 <h4>Reimbursement Information</h4>
-        <Table bordered color='danger'>
-            <thead>
-                <tr>
-                    <td>ReimbursementID</td>
-                    <td>Author</td>
-                    <td>Amount</td>
-                    <td>Description</td>
-                    <td>Resolver</td>
-                    {/* <td>Status</td> */}
-                </tr>
-            </thead>
-            <tbody>
-                {rows}
-            </tbody>
-        </Table>
-    </div>
-       )
-   }    
+                <Table bordered color='danger'>
+                    <thead>
+                        <tr>
+                            <td>ReimbursementID</td>
+                            <td>Author</td>
+                            <td>Amount</td>
+                            <td>Description</td>
+                            <td>Resolver</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {rows}
+                    </tbody>
+                </Table>
+            </div>
+        )
+    }
 }

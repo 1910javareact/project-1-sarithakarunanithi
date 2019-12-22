@@ -5,11 +5,11 @@ import { User } from '../../models/users'
 import { getAllUsers } from '../../remote/user'
 import { UsersDisplayRowComponent } from './users-display-row/UsersDisplayRowComponent'
 
-interface IUsersDisplayProps extends RouteComponentProps{
-    user:User
+interface IUsersDisplayProps extends RouteComponentProps {
+    user: User
 }
 
-interface IUsersDisplayState{
+interface IUsersDisplayState {
     allUsers: User[]
 }
 
@@ -48,10 +48,10 @@ export class UsersDisplayComponent extends React.Component<any, IUsersDisplaySta
 
                 <div className="idinput">
                     <h4>Users Information</h4>
-                    <Table bordered color='danger'>
+                    <Table bordered color='danger' hover>
                         <thead>
                             <tr>
-                                <td>ID</td>
+                                <td>User ID</td>
                                 <td>Firstname</td>
                                 <td>Lastname</td>
                                 <td>Email</td>
@@ -67,9 +67,9 @@ export class UsersDisplayComponent extends React.Component<any, IUsersDisplaySta
                 //it keeps track of everywhere you have been
                 //you can use push to go to a new location or pop to go backwards one
                 //this.props.history.push('/login')
-                
+
                 // when this component is rendered, it takes you back to the path
-                <Redirect to='/login'/>
+                <Redirect to='/login' />
         )
     }
 }

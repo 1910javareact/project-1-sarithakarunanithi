@@ -14,29 +14,29 @@ import { useridReducer } from "./userid-reducer";
 //this is specifically, the state from the login component
 //other things will be able to use it, but it is under the name of login
 export interface ILoginState {
-    user:User
+    user: User
 }
 
 //will be the typing of our entire global state
-export interface IState{
-    login:ILoginState,
-    reimb: IReimbursement  
-    uid:IUser
+export interface IState {
+    login: ILoginState,
+    reimb: IReimbursement
+    uid: IUser
 
 }
 
 //this will combine all of our reducers
 //and make sure they fulfill the state required by IState
 export const state = combineReducers<IState>({
-    login:loginReducer, 
-    reimb:reimbursementReducer,  
-    uid:useridReducer
+    login: loginReducer,
+    reimb: reimbursementReducer,
+    uid: useridReducer
 })
 
-export interface IReimbursement{
-    reimbursement:Reimbursement[]
+export interface IReimbursement {
+    reimbursement: Reimbursement[]
 }
 
-export interface IUser{
-    user:User
+export interface IUser {
+    user: User
 }

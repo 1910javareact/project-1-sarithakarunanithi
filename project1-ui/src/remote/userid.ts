@@ -1,24 +1,23 @@
 import { uUserClient } from "./user-clients/user-client"
 
 
-export const getUserId = async(id:number) => {
-    try{
+export const getUserId = async (id: number) => {
+    try {
         let response = await uUserClient.get('/users/' + id)
-        
-        if(response.status === 200){
-            return{
+
+        if (response.status === 200) {
+            return {
                 status: response.status,
                 body: response.data
             }
-        }else{
-            return{
-                status:response.status,
-                body:undefined
+        } else {
+            return {
+                status: response.status,
+                body: undefined
             }
         }
-    }catch(e){
+    } catch (e) {
         console.log(e);
         throw new Error('Something Went Wrong')
-        
     }
 }

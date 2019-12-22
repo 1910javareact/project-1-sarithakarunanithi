@@ -6,28 +6,28 @@ export const ReimbTypes = {
     SUCCESSFUL_REIMBURSEMENT: 'REIMBURSEMENT_FOUND',
     UNSUCCESSFUL_FAILED: 'REIMBURSEMENT_NOT_FOUND'
 }
-export const reimbursementID = (id:number) => async (dispatch:any) => {
+export const reimbursementID = (id: number) => async (dispatch: any) => {
 
-    try{
+    try {
         let res = await getReimbursementByStatus(id)
         //a successful login
-        if(res.status === 200){
+        if (res.status === 200) {
             //this is how do it when we have async operations
             dispatch({
-                type:ReimbTypes.SUCCESSFUL_REIMBURSEMENT,
-                payload:{
-                    reimbursement:res.body
+                type: ReimbTypes.SUCCESSFUL_REIMBURSEMENT,
+                payload: {
+                    reimbursement: res.body
                 }
             })
-        }else{
+        } else {
             dispatch({
-                type:ReimbTypes.INVALID_CREDENTIALS
+                type: ReimbTypes.INVALID_CREDENTIALS
             })
         }
-    }catch(e){
+    } catch (e) {
         dispatch({
-            type:ReimbTypes.UNSUCCESSFUL_FAILED
+            type: ReimbTypes.UNSUCCESSFUL_FAILED
         })
     }
-    
+
 }

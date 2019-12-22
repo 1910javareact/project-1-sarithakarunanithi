@@ -5,28 +5,28 @@ export const UTypes = {
     SUCCESSFUL_USER: 'USERID_FOUND',
     UNSUCCESSFUL_FAILED: 'USERID_NOT_FOUND'
 }
-export const userID = (id:number) => async (dispatch:any) => {
+export const userID = (id: number) => async (dispatch: any) => {
 
-    try{
+    try {
         let res = await getUserId(id)
         //a successful login
-        if(res.status === 200){
+        if (res.status === 200) {
             //this is how do it when we have async operations
             dispatch({
-                type:UTypes.SUCCESSFUL_USER,
-                payload:{
-                    user:res.body
+                type: UTypes.SUCCESSFUL_USER,
+                payload: {
+                    user: res.body
                 }
             })
-        }else{
+        } else {
             dispatch({
-                type:UTypes.INVALID_CREDENTIALS
+                type: UTypes.INVALID_CREDENTIALS
             })
         }
-    }catch(e){
+    } catch (e) {
         dispatch({
-            type:UTypes.UNSUCCESSFUL_FAILED
+            type: UTypes.UNSUCCESSFUL_FAILED
         })
     }
-    
+
 }

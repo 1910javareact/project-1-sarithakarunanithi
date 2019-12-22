@@ -3,9 +3,9 @@ import { UseridComponent } from "./UseridComponent";
 import { userID } from "../../action-mappers/userid-action-mappers"
 import { connect } from "react-redux";
 
-const mapStateToProps = (state:IState) => {
-    return{
-        user:state.uid.user
+const mapStateToProps = (state: IState) => {
+    return {
+        user: state.uid.user
     }
 }
 

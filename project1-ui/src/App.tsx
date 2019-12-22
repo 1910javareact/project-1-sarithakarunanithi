@@ -7,8 +7,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './Store';
 import UsersDisplayComponent from './components/users-dispaly/UsersDisplayContainer';
-import ReimbursementByStatusComponent  from './components/reimbursement-bystatus-display/ReimbursementByStatusContainer';
-import  UseridComponent  from './components/userid-component/UseridContainer';
+import ReimbursementByStatusComponent from './components/reimbursement-bystatus-display/ReimbursementByStatusContainer';
+import UseridComponent from './components/userid-component/UseridContainer';
 //4 words to remember -- import default from container  
 
 // Function component
@@ -23,10 +23,10 @@ const App: React.FC = () => {
           </nav>
           <Switch>
             <Route path='/login' component={LoginComponent} />
-            <Route path = '/users/display/id' component={UseridComponent} />
-            <Route path ='/users/' component ={UsersDisplayComponent} />
-            <Route path = '/reimbursements/status/' component={ReimbursementByStatusComponent} />
-           
+            <Route path='/users/display/id' component={UseridComponent} />
+            <Route path='/users/' component={UsersDisplayComponent} />
+            <Route path='/reimbursements/status/' component={ReimbursementByStatusComponent} />
+
             {/* <Home /> */}
 
           </Switch>

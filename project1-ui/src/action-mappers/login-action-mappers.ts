@@ -16,29 +16,29 @@ export const uLoginTypes = {
 // when we do async, we return a function that returns an action
 //then, redux thunk is going to intercept that function, and call it when the async is done
 
-export const uLogin = (username:string, password:string) => async (dispatch:any) => {
+export const uLogin = (username: string, password: string) => async (dispatch: any) => {
 
-    try{
+    try {
         let res = await userLogin(username, password)
         //a successful login
-        if(res.status === 200){
+        if (res.status === 200) {
             //this is how do it when we have async operations
             //Actions must have a type property that indicates the type of action being performed.
             //initiate a dispatch, pass the result to the dispatch() function
             dispatch({
-                type:uLoginTypes.SUCCESSFUL_LOGIN,
-                payload:{
-                    user:res.body
+                type: uLoginTypes.SUCCESSFUL_LOGIN,
+                payload: {
+                    user: res.body
                 }
             })
-        }else{
+        } else {
             dispatch({
-                type:uLoginTypes.INVALID_CREDENTIALS
+                type: uLoginTypes.INVALID_CREDENTIALS
             })
         }
-    }catch(e){
+    } catch (e) {
         dispatch({
-            type:uLoginTypes.UNSUCCESSFUL_LOGIN
+            type: uLoginTypes.UNSUCCESSFUL_LOGIN
         })
-    }   
+    }
 }
