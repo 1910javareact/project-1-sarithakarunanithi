@@ -10,6 +10,7 @@ import UsersDisplayComponent from './components/users-dispaly/UsersDisplayContai
 import ReimbursementByStatusComponent from './components/reimbursement-bystatus-display/ReimbursementByStatusContainer';
 import UseridComponent from './components/userid-component/UseridContainer';
 import RembursementByUserComponent from './components/reimbursement-byuser-display/ReimbursementByUserContainer';
+import { UpdateUserComponent } from './components/update-user-component/UpdateUserComponent';
 //import ReimbursementByUserComponent from './components/reimbursement-byuser-display/ReimbursementByUserContainer';
 
 //4 words to remember -- import default from container  
@@ -27,6 +28,7 @@ const App: React.FC = () => {
           <Switch>
             <Route path='/login' component={LoginComponent} />
             <Route path='/users/display/id' component={UseridComponent} />
+            <Route path='/users/update' component={UpdateUserComponent} />
             <Route path='/users/' component={UsersDisplayComponent} />
             <Route path='/reimbursements/status/' component={ReimbursementByStatusComponent} />
             {/* <Route path='/reimbursements/user/' component={ReimbursementByUserComponent} /> */}
