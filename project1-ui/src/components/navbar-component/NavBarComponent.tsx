@@ -41,7 +41,7 @@ const ReimbursementNavBar = (props: any) => {
               <Link to='/reimbursements/'>SubmitReimbursement</Link>
             </NavItem>
             <NavItem className="nav">
-              <Link to='/reimbursements/'>UpdateReimbursement</Link>
+              <Link to='/reimbursements/update/'>UpdateReimbursement</Link>
             </NavItem>
             <NavItem className="nav">
               <Link to='/reimbursements/user/'>ReimbursementUser</Link>

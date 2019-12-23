@@ -36,7 +36,7 @@ export class RembursementByUserComponent extends React.Component<IRembursementBy
 
     render() {
         let rows = this.props.reimbursement.map((e) => {
-            return <ReimbursementByUserDisplayRow reimbursement={e} key={'reimbursement' + e.reimbursementId} />//mapping  through keys and value ,Reimbursement is the key and + e.reimbursementId is the value
+            return <ReimbursementByUserDisplayRow reimbursement={e} key={'reimbursement' + e.reimbursementId} />
         })
         return (
 

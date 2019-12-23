@@ -11,7 +11,9 @@ import ReimbursementByStatusComponent from './components/reimbursement-bystatus-
 import UseridComponent from './components/userid-component/UseridContainer';
 import RembursementByUserComponent from './components/reimbursement-byuser-display/ReimbursementByUserContainer';
 import { UpdateUserComponent } from './components/update-user-component/UpdateUserComponent';
-//import ReimbursementByUserComponent from './components/reimbursement-byuser-display/ReimbursementByUserContainer';
+import { ReimbursementUpdateComponent } from './components/reimbursement-update/ReimbursementUpdateComponent';
+//import ReimbursementUpdateComponent from './components/reimbursement-update/ReimbursementUpdateContainer';
+
 
 //4 words to remember -- import default from container  
 
@@ -31,8 +33,7 @@ const App: React.FC = () => {
             <Route path='/users/update' component={UpdateUserComponent} />
             <Route path='/users/' component={UsersDisplayComponent} />
             <Route path='/reimbursements/status/' component={ReimbursementByStatusComponent} />
-            {/* <Route path='/reimbursements/user/' component={ReimbursementByUserComponent} /> */}
-
+            <Route path='/reimbursements/update/' component={ReimbursementUpdateComponent} />
             <Route path='/reimbursements/user/' component={RembursementByUserComponent} />
 
             {/* <Home /> */}
