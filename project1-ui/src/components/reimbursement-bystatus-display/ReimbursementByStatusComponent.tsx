@@ -30,7 +30,7 @@ export class ReimbursementByStatusComponent extends React.Component<IReimburseme
     submitId = async (e: SyntheticEvent) => {
         e.preventDefault()
         this.props.reimbursementID(this.state.id)
-        this.setState({
+        this.setState({ 
             id: ''
         })
     }

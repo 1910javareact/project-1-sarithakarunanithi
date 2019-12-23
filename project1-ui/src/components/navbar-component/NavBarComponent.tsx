@@ -30,10 +30,19 @@ const ReimbursementNavBar = (props: any) => {
               <Link to='/users/display/id/'>UserById</Link>
             </NavItem>
             <NavItem className="nav">
+              <Link to='/'>UpdateUser</Link>
+            </NavItem>
+            <NavItem className="nav">
               <Link to='/users/display'>Users</Link>
             </NavItem>
             <NavItem className="nav">
               <Link to='/reimbursements/status/'>ReimbursementStatus</Link>
+            </NavItem>
+            <NavItem className="nav">
+              <Link to='/reimbursements/'>SubmitReimbursement</Link>
+            </NavItem>
+            <NavItem className="nav">
+              <Link to='/reimbursements/'>UpdateReimbursement</Link>
             </NavItem>
             <NavItem className="nav">
               <Link to='/reimbursements/user/'>ReimbursementUser</Link>
