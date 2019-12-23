@@ -30,6 +30,9 @@ export class ReimbursementByStatusComponent extends React.Component<IReimburseme
     submitId = async (e: SyntheticEvent) => {
         e.preventDefault()
         this.props.reimbursementID(this.state.id)
+        this.setState({
+            id: ''
+        })
     }
 
     render() {
@@ -41,8 +44,8 @@ export class ReimbursementByStatusComponent extends React.Component<IReimburseme
             <div className="idinput">
                 <Form onSubmit={this.submitId}>
                     <FormGroup>
-                        <Label for="exampleID">Reimbursement ID</Label>
-                        <Input value={this.state.id} onChange={this.updateId} type="number" name="ID" id="exampleID" placeholder="Id" />
+                        <Label for="exampleID"><h5>Reimbursement ID</h5></Label>
+                        <Input value={this.state.id} onChange={this.updateId} type="number" name="ID" id="exampleID" placeholder="Have your Id" />
                     </FormGroup>
                     <Button color='info'>Submit</Button>
                 </Form>

@@ -19,7 +19,7 @@ const ReimbursementNavBar = (props: any) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Reimbursement</NavbarBrand>
+        <NavbarBrand>Reimbursement</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -34,6 +34,9 @@ const ReimbursementNavBar = (props: any) => {
             </NavItem>
             <NavItem className="nav">
               <Link to='/reimbursements/status/'>ReimbursementStatus</Link>
+            </NavItem>
+            <NavItem className="nav">
+              <Link to='/reimbursements/user/'>ReimbursementUser</Link>
             </NavItem>
           </Nav>
         </Collapse>

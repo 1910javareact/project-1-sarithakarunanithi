@@ -45,11 +45,12 @@ export class LoginComponent extends React.Component<ILoginComponentProps, any>{
             <div className="idinput">
                 <Form onSubmit={this.submitLogin}>
                     <FormGroup>
-                        <Label for="exampleUsername">Username</Label>
+                        <h5>Please have your Login Infomation :</h5><br/>
+                        <Label for="exampleUsername" className="formlable" >Username :</Label>
                         <Input value={this.state.username} onChange={this.updateUsername} type="text" name="username" id="exampleUsername" placeholder="Username" />
                     </FormGroup>
                     <FormGroup>
-                        <Label for="examplePassword">Password</Label>
+                        <Label for="examplePassword">Password :</Label>
                         <Input value={this.state.password} onChange={this.updatePassword} type="password" name="password" id="examplePassword" placeholder="Password" />
                     </FormGroup>
                     <Button onClick={this.submitLogin} color='info'>Login</Button>

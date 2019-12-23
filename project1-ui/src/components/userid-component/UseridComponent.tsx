@@ -1,5 +1,4 @@
 import React, { SyntheticEvent } from "react"
-import { RouteComponentProps } from "react-router"
 import { User } from "../../models/users"
 import { Form, FormGroup, Label, Input, Button, Table } from "reactstrap"
 
@@ -29,6 +28,9 @@ export class UseridComponent extends React.Component<IUseridProps, any>{
     submitId = async (e: SyntheticEvent) => {
         e.preventDefault()
         this.props.userID(this.state.id)
+        this.setState({
+            id:''
+        })
     }
 
     render() {
@@ -37,7 +39,7 @@ export class UseridComponent extends React.Component<IUseridProps, any>{
             <div className="idinput">
                 <Form onSubmit={this.submitId}>
                     <FormGroup>
-                        <Label for="exampleID">User ID</Label>
+                        <Label for="exampleID"><h5>User ID</h5></Label>
                         <Input value={this.state.id} onChange={this.updateId} type="number" name="ID" id="exampleID" placeholder="Have your User ID" />
                     </FormGroup>
                     <Button color='info'>Submit</Button>
