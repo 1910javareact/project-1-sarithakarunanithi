@@ -48,7 +48,7 @@ export class UsersDisplayComponent extends React.Component<any, IUsersDisplaySta
 
                 <div className="idinput">
                     <h4>Users Information</h4>
-                    <Table bordered color='danger'>
+                    <Table bordered color='danger' dark>
                         <thead>
                             <tr>
                                 <td>User ID</td>

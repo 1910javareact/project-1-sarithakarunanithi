@@ -50,7 +50,7 @@ export class RembursementByUserComponent extends React.Component<IRembursementBy
                 </Form>
                 <br />
                 <h4>Reimbursement Information</h4>
-                <Table bordered color='danger'>
+                <Table bordered color='danger' dark>
                     <thead>
                         <tr>
                             <td>ReimbursementID</td>

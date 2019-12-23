@@ -51,7 +51,7 @@ export class ReimbursementByStatusComponent extends React.Component<IReimburseme
                 </Form>
                 <br />
                 <h4>Reimbursement Information</h4>
-                <Table bordered color='danger'>
+                <Table bordered color='danger' dark>
                     <thead>
                         <tr>
                             <td>ReimbursementID</td>

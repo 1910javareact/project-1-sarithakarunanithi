@@ -48,7 +48,7 @@ export class UseridComponent extends React.Component<IUseridProps, any>{
                 <br />
                 <h4>User Information</h4>
 
-                <Table bordered color='danger'>
+                <Table bordered color='danger' dark>
                     <thead>
                         <tr>
                             <td>UserID</td>
