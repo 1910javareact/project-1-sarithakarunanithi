@@ -90,6 +90,10 @@ export class ReimbursementUpdateComponent extends React.Component<any, any> {
                         <Input type="text" name="author" id="author" value={this.state.author} onChange={this.updateAuthor} placeholder="Author" />
                     </FormGroup>
                     <FormGroup>
+                        <Label for="amount">Amount</Label>
+                        <Input type="text" name="amount" id="author" value={this.state.amount} onChange={this.updateAmount} placeholder="Amount" />
+                    </FormGroup>
+                    <FormGroup>
                         <Label for="description">Description</Label>
                         <Input type="text" name="description" id="description" value={this.state.description} onChange={this.updateDescription} placeholder="Description" />
                     </FormGroup>
